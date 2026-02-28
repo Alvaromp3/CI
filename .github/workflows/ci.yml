@@ -31,5 +31,9 @@ jobs:
       - name: Lint (flake8)
         run: flake8 . --max-line-length=100
 
+      - name: Lint with flake8
+        run: |
+          flake8 . --max-line-length=100
+
       - name: Run unit tests
         run: pytest -q
