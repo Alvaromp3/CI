@@ -1,4 +1,7 @@
 def calculate_shipping(weight_kg: float, is_express: bool, destination: str) -> float:
+
+
+    
     # R1: validar inputs
     if weight_kg <= 0 or weight_kg > 50:
         raise ValueError("weight_kg out of range")
@@ -26,4 +29,6 @@ def calculate_shipping(weight_kg: float, is_express: bool, destination: str) -> 
         subtotal *= 1.6
 
     # R5 solo redondeamos
+    return round(subtotal, 2)
+
     return round(subtotal, 2)
